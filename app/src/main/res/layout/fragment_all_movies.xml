@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true"
+    android:background="#000"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.movies.AllMoviesFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:visibility="visible"
+        android:gravity="center|left">
+
+
+        <SearchView
+            android:id="@+id/search_movies"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:queryHint="Buscar película"
+            android:iconifiedByDefault="false"
+            android:searchIcon="@drawable/magnify"
+            android:closeIcon="@drawable/close"
+            style="@style/SearchViewStyle"
+            android:queryBackground="@android:color/transparent"
+            />
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_all_movies"
+        android:layout_width="match_parent"
+        android:background="#000"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/linear_load_more"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Cargar más"
+            android:textColor="@color/color_gray"/>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/sync"
+            android:layout_marginLeft="5dp"
+            android:tint="@color/color_gray"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+</androidx.core.widget.NestedScrollView>

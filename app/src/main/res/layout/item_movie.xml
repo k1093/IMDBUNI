@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="200dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#3C000000">
+
+        <ImageView
+            android:id="@+id/image_movie_poster"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+
+        <TextView
+            android:id="@+id/text_movie_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Pelicula engazada"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            android:visibility="gone"
+            android:textSize="16dp"
+            android:gravity="bottom"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/text_movie_overview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="30"
+            android:textColor="#FFF"
+            android:visibility="gone"
+            android:text="Esto es un texto largo para ver solamente que no se pierda el texto en el item del menu, gracias por probar este tipo de layout , ya que debes ser mas flexible que un Relativalyout, aunque sigue siendo pesado como para colocarlo en un recyclerview"
+            android:textSize="14dp"
+            tools:layout_editor_absoluteX="0dp" />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/image_favorite"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/heart"
+         android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:tint="@color/color_error"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="276dp" />
+
+
+
+</RelativeLayout>
